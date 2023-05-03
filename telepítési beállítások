@@ -1,0 +1,37 @@
+*****************************************************
+PPA
+
+ppa:remmina-ppa-team/remmina-next
+ppa:remmina-ppa-team/remmina-next-daily
+
+*****************************************************
+Install
+
+sudo sh /media/$USER/Ventoy/install.sh
+
+*****************************************************
+ZSH
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+mkdir ~/bin
+nano ~/.zshrc
+
+PATH="$PATH:$(find ~/bin -type d -printf ":%p")"
+
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="/usr/bin/nano"
+
+plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting)
+
+
+*****************************************************
+monitor
+
+xrandr --output DisplayPort-1 --scale 1x1 --pos "0x0" --rotate left --output eDP --scale 2x2 --rotate normal
+
+
+*****************************************************

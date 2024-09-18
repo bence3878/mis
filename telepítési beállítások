@@ -29,6 +29,12 @@ plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting)
 
 
 *****************************************************
+DRIVE
+
+mkdir ~/asus
+
+git clone https://github.com/asus-linux-drivers/asus-numberpad-driver ${ASUS_NUMBERPAD:-~/asus}/asus-numberpad-driver
+*****************************************************
 monitor
 
 xrandr --output DisplayPort-1 --scale 1x1 --pos "0x0" --rotate left --output eDP --scale 2x2 --rotate normal
